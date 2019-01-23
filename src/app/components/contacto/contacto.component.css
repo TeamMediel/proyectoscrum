@@ -43,3 +43,8 @@
     color: black;
     font-style: italic
 }
+.total{
+    background: #f0ffff;
+    width: 100%;
+    padding: 0
+}
