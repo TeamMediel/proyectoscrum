@@ -12,3 +12,13 @@ footer{
     width: 90px !important;
     padding: 0 !important;
 }
+
+.fondo{
+    background: url("../assets/img/index.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+
