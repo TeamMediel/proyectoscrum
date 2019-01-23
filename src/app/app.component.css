@@ -1,0 +1,16 @@
+footer img{
+    width: 160px;
+    margin-left: 35%;
+    padding-top: 5%
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 99.5%;
+  padding: 10px;
+  background: #f2f2f2
+}
+.logoespol{
+    width: 90px !important;
+    padding: 0 !important;
+}
