@@ -1,3 +1,45 @@
 .divContacto{
-    padding:  10px
+    padding:  30px
+}
+
+.divContacto .col-md-3{
+    font-display: center;
+    padding: 20px !important;
+    background: rgb(27, 54, 71);
+    margin: 45px;
+    height: 160px;
+    align-content: center;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.divContacto a{
+    color: orange !important
+}
+.divContacto h5{
+ font-weight: bold;
+
+ color: white
+}
+.divContacto p{
+    color: white;
+    font-size: 16px;
+}
+.direccion h4{
+    color: black;
+    font-weight: bold
+}
+.direccion{
+    padding-top: 6%
+}
+.direccion p{
+    font-size: 16px;
+    color: black
+}
+.mencionContacto p{
+    font-size: 20px;
+    text-align: center;
+    font-family: fantasy;
+    color: black;
+    font-style: italic
 }
