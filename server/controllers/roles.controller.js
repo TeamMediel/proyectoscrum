@@ -1,13 +1,15 @@
-const rolesCtrl ={}
+const Roles = require('../models/roles');
+const rolesCtrl = {};
+ 
 rolesCtrl.getRoles = async (req, res) => {
     const roles = await Roles.find();
-    res.json(roles); 
-}
+    res.json(roles);       
+};
 
-
- rolesCtrl.createRoles= async (req, res) => {
-    const roles = new User(req.body);
-      
+rolesCtrl.createRol = async (req, res) => {
+    const roles = new Roles({
+        name: req.body.name
+    });
     await roles.save();
     res.json({
         'status': 'Rol Saved'
@@ -21,23 +23,22 @@ rolesCtrl.getRol = async (req, res) => {
     //res.json('received');
 }
 
-rolesCtrl.editRoles = async (req, res) => {
+rolesCtrl.editRol = async (req, res) => {
     const { id } = req.params;
-    const roles = {
-        name: req.body.name,
-        id_user: req.body.id_user,
-        
+    const rol = {
+        name: req.body.name
     };
-    await User.findByIdAndUpdate(id, {$set: user}, {new: true});
+    await Roles.findByIdAndUpdate(id, {$set: rol}, {new: true});
     res.json({
         status: 'Rol Updated'
     });
 };
 
-userCtrl.deleteRol = async (req, res) => {
+rolesCtrl.deleteRol = async (req, res) => {
     await Roles.findByIdAndRemove(req.params.id);
     res.json({
         status: 'Rol Deleted'
     });
 };
+
 module.exports = rolesCtrl;
