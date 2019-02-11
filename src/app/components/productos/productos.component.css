@@ -4,8 +4,28 @@
     margin-left: auto; 
     float: center;
     margin-top: 20px;
-   width: 310px;
+    width: 450px;
 }
 .estilo{
     color:white;
+    padding: 50px;
+}
+
+.mt-4{
+    margin-right: auto;
+    margin-left: auto; 
+    float: center;
+    width: 500px;
+}
+
+.iconoP{
+    width: 150px;
+}
+
+.productos{
+    margin-right: auto;
+    margin-left: auto; 
+    text-align: center;
+    float: center;
+    margin-top: 20px;
 }
