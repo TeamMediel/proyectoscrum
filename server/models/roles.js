@@ -2,8 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const RolesSchema = new Schema({
-    name: { type: String, required: true},
-    id_user: { type: String, required: true},
+    name: { type: String, required: true}
   
 });
 
