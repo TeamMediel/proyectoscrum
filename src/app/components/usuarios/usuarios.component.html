@@ -1,0 +1,73 @@
+<div class="container centrado">
+  <div class="row">
+    <div class="col s5">
+        <div class="card"> 
+            <div class="card-content">
+              <form #userForm="ngForm" (ngSubmit)="addUser(userForm)">
+                  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="userService.selectedUser._id">
+                <div class="row">
+                <div class="input-field col s12">
+                        <select [(ngModel)]="userService.selectedUser.roles" class='form-control' name="roles">
+                                <option value="" disabled selected>Select a rol</option>
+                                <option *ngFor="let item of rolesService.roles" [value]="item.name">{{item.name}}</option>
+                              </select>
+                </div>        
+                  <div class="input-field col s12">
+                      <input type="text" name="name" #name="ngModel" [(ngModel)]="userService.selectedUser.name" placeholder="Enter your Name">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="lastname" #lastname="ngModel" [(ngModel)]="userService.selectedUser.lastname" placeholder="Enter your Last Name">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="email" name="email" #email="ngModel" [(ngModel)]="userService.selectedUser.email" placeholder="Enter your Email">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="text" name="username" #username="ngModel" [(ngModel)]="userService.selectedUser.username" placeholder="Enter your Username">
+                  </div>
+                  <div class="input-field col s12">
+                      <input type="password" name="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" placeholder="Enter your Password">
+                  </div>
+                  <div class="card-action">
+                      <div class="input-field col s12">
+                        <button class="btn" style="margin-left: 2px">Save</button>
+                        <button class="btn right" (click)="resetForm(userForm)">Clean</button>
+                      </div>
+                    </div>
+                </div> 
+              </form>
+            </div>
+        </div>
+    </div> 
+    <div class="col s7">
+        <table>
+            <thead>
+              <th>Rol</th>  
+              <th>Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+              <th>User Name</th>
+              <th>Password</th>
+              <th>Operations</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of userService.users">
+                <td>{{ user.roles }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.lastname }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.password }}</td>
+                <td>
+                  <a (click)="editUser(user)">
+                      <i class="material-icons">edit</i>
+                  </a>
+                  <a (click)="deleteUser(user._id)">
+                      <i class="material-icons">delete</i>
+                  </a> 
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>
+</div>
