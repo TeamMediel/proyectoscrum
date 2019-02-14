@@ -10,10 +10,12 @@ import { RegisterComponent } from './components/user/register/register.component
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { RolesComponent } from './components/roles/roles.component';
 import { JuegosComponent } from './components/juegos/juegos.component';
+import { EncuestaComponent } from './components/encuesta/encuesta.component';
 
 
 export const routes: Routes = [
   {path: 'juegos', component: JuegosComponent},
+  {path: 'encuesta', component: EncuestaComponent},
   {path: 'roles', component: RolesComponent},
   {path: 'usuarios', component: UsuariosComponent},
   {path: 'user/register', component: RegisterComponent},
