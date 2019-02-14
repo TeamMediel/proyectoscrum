@@ -9,6 +9,22 @@
 .estilo{
     color:white;
     padding: 50px;
+    font-size: 18px;
+}
+
+
+
+.parrots{
+    text-align: left;
+    float: left;
+    float: center;
+    width: 40%;
+}
+
+.parrot{
+    text-align: right;
+    float: right;
+    width: 30%;
 }
 
 .mt-4{

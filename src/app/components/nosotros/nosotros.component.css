@@ -2,4 +2,11 @@
     align-content: center;
     padding: 50px;
     color:white;
+    font-size: 18px;
+}
+
+.fuente{
+    font-size: 18px;   
+    text-align: justify;
+    text-justify: inter-word;
 }
