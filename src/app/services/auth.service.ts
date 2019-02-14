@@ -10,8 +10,10 @@ import { Users } from "../models/users";
   providedIn: 'root'
 })
 export class AuthService {
+  private isUserLoggedIn;
+  public usserLogged:Users;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {this.isUserLoggedIn = false; }
 
   headers: HttpHeaders = new HttpHeaders({
     "Content-Type": "application/json"
@@ -28,11 +30,23 @@ loginuser(email: string, password: string): Observable<any> {
   return this.http.post(url_api, {email, password});
 }
 
+setUserLoggedIn(user:Users) {
+  this.isUserLoggedIn = true;
+  this.usserLogged = user;
+  localStorage.setItem('currentUser', JSON.stringify(user));
+}
+
+getUserLoggedIn() {
+  //console.log("miau",localStorage.getItem('currentUser'));
+  return localStorage.getItem('currentUser');
+}
+
 logoutUser() {
   /*let accessToken = localStorage.getItem("accessToken");
   const url_api = `http://localhost:3000/user/logout?access_token=${accessToken}`;
   localStorage.removeItem("accessToken");
   localStorage.removeItem("currentUser");
   return this.htttp.post<Users>(url_api, { headers: this.headers });*/
+  localStorage.removeItem("currentUser");
 }
 }

@@ -69,7 +69,7 @@ a, li {
 	padding: 0;
 	list-style: none;
 	font-size: 1.5em;
-	font-weight: 300;
+	font-weight: 500;
 }
 
 .nav li span {
@@ -286,7 +286,12 @@ a, button {
 	.no-touch .nav ul li:nth-child(6n+1) a:focus {
 		background: rgb(227, 119, 20);
 	}
-
+	.logos{
+		display: none;
+	}
+	.footer{
+		display:block !important;
+	}
 	.no-touch .nav li:nth-child(6n+2) a:hover,
 	.no-touch .nav li:nth-child(6n+2) a:active,
 	.no-touch .nav li:nth-child(6n+2) a:focus {
@@ -336,7 +341,12 @@ a, button {
 		float: left;
 		width: 50%;
 	}
-	
+	.logos{
+		display: none;
+	}
+	.footer{
+		display:block !important;
+	}
 	/* Adding some padding to make the elements look nicer*/
 	.nav a {
 		padding: 0.8em;		
@@ -387,7 +397,12 @@ a, button {
 
 /* Adapting the font size and width for smaller screns*/
 @media (min-width: 32.5em) and (max-width: 38.688em) {
-	
+	.logos{
+		display: none;
+	}
+	.footer{
+		display:block !important;
+	}
 	.nav li span.icon {
 		width: 50%;
 	}
@@ -431,7 +446,12 @@ a, button {
 		margin: 0;
 		display: block;
 	}
-	
+	.logos{
+		display: none;
+	}
+	.footer{
+		display:block !important;
+	}
 	/* Animating the height of the navigation when the button is clicked */
 	
 	/* When JavaScript is disabled, we hide the menu */

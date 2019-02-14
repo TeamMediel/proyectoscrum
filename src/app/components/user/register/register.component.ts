@@ -35,6 +35,7 @@ export class RegisterComponent implements OnInit {
           /*this.authService.setUser(user);
           const token = user.id;
           this.authService.setToken(token);*/
+          this.authService.setUserLoggedIn(user);
           this.router.navigate(['/user/login']);
           location.reload();
         },

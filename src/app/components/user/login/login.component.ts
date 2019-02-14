@@ -30,13 +30,14 @@ export class LoginComponent implements OnInit {
         .loginuser(this.user.email, this.user.password)
         .subscribe(
           data => {
-            /*this.authService.setUser(data.user);
-            let token = data.id;
-            this.authService.setToken(token);*/
+            this.authService.setUserLoggedIn(data);
+            //let token = data.id;
+            //this.authService.setToken(token);
             this.router.navigate(['/juegos']);
-            //location.reload();
+            location.reload();
             //this.isError = false;
             console.log('Success trace', data);
+            console.log('userLogged',this.authService.usserLogged);
           },
           error =>{
             console.log('Error trace',error);

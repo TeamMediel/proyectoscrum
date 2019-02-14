@@ -8,9 +8,7 @@ authCtrl.login = async (req, res) => {
     let user = await User.findOne({email: req.body.email});
     if(user){
         if(user.password == req.body.password){
-            res.json({
-                'status': 'Login successfull. Welcome '+ user.name
-            });
+            res.json(user);
         } else {
             res.json(401, {
                 'status': 'Login failed, User or Password Wrong'
@@ -38,9 +36,7 @@ authCtrl.register = async (req, res) => {
             password: req.body.password
         });
         user.save().then(() => {
-            res.json(201, {
-                'status': 'User registered successfully'
-            })
+            res.json(user)
         });
     } else {
         res.json(302, {

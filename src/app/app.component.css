@@ -1,16 +1,36 @@
+html, body {
+    min-width: 100%;
+    height: 100% !important;
+    margin: 0;
+    padding: 0%;
+}
+.logos img{
+    width: 200px;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+.logos{
+    height:100%; 
+    position:fixed; 
+    right:0;
+    float: right;
+    margin-top: 3%;
+}
+.router{
+    float:right;
+}
 footer img{
     width: 160px;
     margin-left: 35%;
     padding-top: 5%
 }
 footer{
-  width: 99.5%;
-  padding: 10px;
-  background: #f2f2f2
+  width: 99.7%;
+  padding: 5px;
+  
 }
-.logoespol{
-    width: 90px !important;
-    padding: 0 !important;
+.footer{
+    display: none;
 }
 
 .fondo{
@@ -19,6 +39,8 @@ background: url("../assets/img/index.jpeg") no-repeat center center fixed;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
+height: 100% !important;
+margin: 0;
 }
 
 .centrado{
