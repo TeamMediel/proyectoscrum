@@ -16,7 +16,7 @@ import { RegisterComponent } from './components/user/register/register.component
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { RolesComponent } from './components/roles/roles.component';
 import { JuegosComponent } from './components/juegos/juegos.component';
-
+import { EncuestaComponent } from './components/encuesta/encuesta.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import { JuegosComponent } from './components/juegos/juegos.component';
     RegisterComponent,
     UsuariosComponent,
     RolesComponent,
-    JuegosComponent
+    JuegosComponent,
+    EncuestaComponent
   ],
   imports: [
     BrowserModule,
