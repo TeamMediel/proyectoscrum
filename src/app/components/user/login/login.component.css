@@ -2,7 +2,22 @@
     border: 0 solid #fff !important;
 }
 
+.buttonRegis {
+    border-radius: 4px;
+    background-color: #3f6ccc;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 5px;
+  }
+
 .login{
     padding-bottom: 130px;
     padding-top: 90px;
 }
+
+.buttonRegis:hover {
+    background-color: #6791fc;
+  }
