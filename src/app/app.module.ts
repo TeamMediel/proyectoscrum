@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { ModalService } from '../app/services/modal.service';
+import { ModalComponent } from './_directives';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -31,6 +32,7 @@ import { EncuestaComponent } from './components/encuesta/encuesta.component';
     UsuariosComponent,
     RolesComponent,
     JuegosComponent,
+    ModalComponent,
     EncuestaComponent
   ],
   imports: [
@@ -40,7 +42,7 @@ import { EncuestaComponent } from './components/encuesta/encuesta.component';
     HttpClientModule
 
   ],
-  providers: [],
+  providers: [ModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
