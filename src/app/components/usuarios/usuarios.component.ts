@@ -16,9 +16,20 @@ import { User } from 'src/app/models/user';
 export class UsuariosComponent implements OnInit {
 
   constructor(private userService: UserService,private router: Router) { }
-
+  public usserLogged:User;
   ngOnInit() {
-    this.getUsers();
+    this.usserLogged=JSON.parse(localStorage.getItem("currentUser"));
+    if(this.usserLogged!=null){
+      if(this.usserLogged.roles=="administrador"){
+        this.getUsers();
+      }else{
+        
+        this.router.navigate(['/inicio']);
+      }
+    }else{
+      this.router.navigate(['/user/login']);
+    }
+    
   }
 
   cerrarsesion(){

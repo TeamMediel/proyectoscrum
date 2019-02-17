@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { LineagraficaService } from '../../services/lineagrafica.service';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Lineagrafica } from 'src/app/models/lineagrafica';
-
+import { User } from "../../models/user";
 
 @Component({
   selector: 'app-lineagraficas',
@@ -11,8 +12,8 @@ import { Lineagrafica } from 'src/app/models/lineagrafica';
 })
 export class LineagraficasComponent implements OnInit {
 
-  constructor(private lineagraficaService: LineagraficaService) { }
-
+  constructor(private lineagraficaService: LineagraficaService,private router: Router) { }
+  public usserLogged:User;
   public loli1:number;
   public loli2:number;
   public loli3:number;
@@ -44,8 +45,20 @@ export class LineagraficasComponent implements OnInit {
 
     this.background1 = 0;
     this.background2 = 0;
+    this.usserLogged=JSON.parse(localStorage.getItem("currentUser"));
 
-    this.getLineagraficas();
+    if(this.usserLogged!=null){
+      if(this.usserLogged.roles=="administrador"){
+        this.getLineagraficas();
+      }else{
+        
+        this.router.navigate(['/inicio']);
+      }
+    }else{
+      this.router.navigate(['/user/login']);
+    }
+    
+    
     
 
   }

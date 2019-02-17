@@ -10,6 +10,12 @@
 
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    #selected{
+    opacity: 0.7;
+    transform: scale(1.1);
+    }
+  </style>
   
 </head>
 <body>
@@ -51,6 +57,97 @@
       }
     }
   </script>
+
+<script>
+
+  function selectedAnswer1(img){  
+
+    document.getElementsByClassName('item1')[0].style.opacity=1;
+    document.getElementsByClassName('item1')[0].style.transform='scale(1)';
+    document.getElementsByClassName('item1')[0].id="";
+
+    document.getElementsByClassName('item2')[0].style.opacity=1;
+    document.getElementsByClassName('item2')[0].style.transform='scale(1)';
+    document.getElementsByClassName('item2')[0].id="";
+
+    document.getElementsByClassName('item3')[0].style.opacity=1;
+    document.getElementsByClassName('item3')[0].style.transform='scale(1)';
+    document.getElementsByClassName('item3')[0].id="";
+
+    img.style.opacity=0.7;
+    img.style.transform='scale(1.1)';
+    img.id = "selected";
+
+  } 
+
+   function selectedAnswer2(img){  
+
+    document.getElementsByClassName('item21')[0].style.opacity=1;
+    document.getElementsByClassName('item21')[0].style.transform='scale(1)';
+    document.getElementsByClassName('item21')[0].id="";
+
+    document.getElementsByClassName('item22')[0].style.opacity=1;
+    document.getElementsByClassName('item22')[0].style.transform='scale(1)';
+    document.getElementsByClassName('item22')[0].id="";
+
+    document.getElementsByClassName('item23')[0].style.opacity=1;
+    document.getElementsByClassName('item23')[0].style.transform='scale(1)';
+    document.getElementsByClassName('item23')[0].id="";
+
+    img.style.opacity=0.7;
+    img.style.transform='scale(1.1)';
+    img.id = "selected";
+
+  } 
+
+     function selectedAnswer3(img){  
+
+    document.getElementsByClassName('item31')[0].style.opacity=1;
+    document.getElementsByClassName('item31')[0].style.transform='scale(1)';
+    document.getElementsByClassName('item31')[0].id="";
+
+    document.getElementsByClassName('item32')[0].style.opacity=1;
+    document.getElementsByClassName('item32')[0].style.transform='scale(1)';
+    document.getElementsByClassName('item32')[0].id="";
+
+    img.style.opacity=0.7;
+    img.style.transform='scale(1.1)';
+    img.id = "selected";
+
+  } 
+
+     function selectedAnswer4(img){  
+
+    document.getElementsByClassName('item41')[0].style.opacity=1;
+    document.getElementsByClassName('item41')[0].style.transform='scale(1)';
+    document.getElementsByClassName('item41')[0].id="";
+
+    document.getElementsByClassName('item42')[0].style.opacity=1;
+    document.getElementsByClassName('item42')[0].style.transform='scale(1)';
+    document.getElementsByClassName('item42')[0].id="";
+
+    img.style.opacity=0.7;
+    img.style.transform='scale(1.1)';
+    img.id = "selected";
+
+  } 
+
+   function selectedAnswer5(img){  
+
+    document.getElementsByClassName('item51')[0].style.opacity=1;
+    document.getElementsByClassName('item51')[0].style.transform='scale(1)';
+    document.getElementsByClassName('item51')[0].id="";
+
+    document.getElementsByClassName('item52')[0].style.opacity=1;
+    document.getElementsByClassName('item52')[0].style.transform='scale(1)';
+    document.getElementsByClassName('item52')[0].id="";
+
+    img.style.opacity=0.7;
+    img.style.transform='scale(1.1)';
+    img.id = "selected";
+
+  } 
+</script>
 
   
 </html>

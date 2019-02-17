@@ -16,7 +16,7 @@ import { LoginComponent } from './components/user/login/login.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { JuegosComponent } from './components/juegos/juegos.component';
-import { EncuestaComponent } from './components/encuesta/encuesta.component';
+import { LineagraficaencuestaComponent } from './components/lineagraficaencuesta/lineagraficaencuesta.component';
 import { UsuariomenuComponent } from './components/usuariomenu/usuariomenu.component';
 import { LineagraficasComponent } from './components/lineagraficas/lineagraficas.component';
 
@@ -33,7 +33,7 @@ import { LineagraficasComponent } from './components/lineagraficas/lineagraficas
     UsuariosComponent,
     JuegosComponent,
     ModalComponent,
-    EncuestaComponent,
+    LineagraficaencuestaComponent,
     UsuariomenuComponent,
     LineagraficasComponent
   ],
