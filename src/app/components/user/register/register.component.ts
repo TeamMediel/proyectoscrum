@@ -14,11 +14,11 @@ export class RegisterComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router, private location: Location ) { }
 
   user = {
-    name: 'Eduardo',
-    lastname: 'Plua',
-    username: 'eplua',
-    email: 'eplua@example.com',
-    password: 'eplua'
+    name: '',
+    lastname: '',
+    email: '',
+    password: '',
+    roles:'usuario'
   }
 
   public isError = false;
@@ -36,11 +36,11 @@ export class RegisterComponent implements OnInit {
           const token = user.id;
           this.authService.setToken(token);*/
           this.authService.setUserLoggedIn(user);
-          this.router.navigate(['/user/login']);
+          this.router.navigate(['/juegos']);
           location.reload();
         },
         res => {
-          this.msgError = res.error.error.details.messages.email;
+          this.msgError = "Usuario ya existe";
           this.onIsError();
         });
     } else {

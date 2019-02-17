@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
- 
+import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
-import { RolesService } from '../../services/roles.service';
 import { NgForm } from '@angular/forms';
 import { User } from 'src/app/models/user';
-import { Roles } from 'src/app/models/roles';
 
 //declare var M: any;
 
@@ -12,16 +10,22 @@ import { Roles } from 'src/app/models/roles';
   selector: 'app-usuarios',
   templateUrl: './usuarios.component.html',
   styleUrls: ['./usuarios.component.css'],
-  providers: [UserService, RolesService]
+  providers: [UserService]
 
 })
 export class UsuariosComponent implements OnInit {
 
-  constructor(private userService: UserService, private rolesService: RolesService) { }
+  constructor(private userService: UserService,private router: Router) { }
 
   ngOnInit() {
     this.getUsers();
-    this.getRoles();
+  }
+
+  cerrarsesion(){
+    this.router.navigate(['/user/login']);
+    localStorage.removeItem("currentUser");
+    
+    location.reload();
   }
 
   addUser(form: NgForm) {
@@ -50,13 +54,6 @@ export class UsuariosComponent implements OnInit {
       });
   }
 
-  getRoles() {
-    this.rolesService.getRoles()
-      .subscribe(res => {
-        this.rolesService.roles = res as Roles[];
-        console.log('getRoles', res);
-      });
-  }
 
   editUser(user: User) {
     this.userService.selectedUser = user;

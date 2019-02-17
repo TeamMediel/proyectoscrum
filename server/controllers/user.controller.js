@@ -12,7 +12,6 @@ userCtrl.createUser = async (req, res) => {
         name: req.body.name,
         lastname: req.body.lastname,
         email: req.body.email,
-        username: req.body.username,
         password: req.body.password
     });
     await user.save();
@@ -35,7 +34,6 @@ userCtrl.editUser = async (req, res) => {
         name: req.body.name,
         lastname: req.body.lastname,
         email: req.body.email,
-        username: req.body.username,
         password: req.body.password
     };
     await User.findByIdAndUpdate(id, {$set: user}, {new: true});
