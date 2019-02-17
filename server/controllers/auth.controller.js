@@ -1,5 +1,4 @@
 const User = require('../models/user');
-const Roles = require('../models/roles');
 const authCtrl = {};
  
 
@@ -26,9 +25,9 @@ authCtrl.register = async (req, res) => {
     let user = await User.find({username: req.body.username});
     
     if(user.length == 0){
-        let rolList = await Roles.find({name: 'usuario'});
+        //let rolList = await Roles.find({name: 'usuario'});
         user = new User({
-            roles: rolList,
+            roles: req.body.roles,
             name: req.body.name,
             lastname: req.body.lastname,
             email: req.body.email,

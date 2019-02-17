@@ -15,9 +15,9 @@ import { PoliticasComponent } from './components/politicas/politicas.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { RegisterComponent } from './components/user/register/register.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
-import { RolesComponent } from './components/roles/roles.component';
 import { JuegosComponent } from './components/juegos/juegos.component';
 import { EncuestaComponent } from './components/encuesta/encuesta.component';
+import { UsuariomenuComponent } from './components/usuariomenu/usuariomenu.component';
 
 @NgModule({
   declarations: [
@@ -30,10 +30,10 @@ import { EncuestaComponent } from './components/encuesta/encuesta.component';
     LoginComponent,
     RegisterComponent,
     UsuariosComponent,
-    RolesComponent,
     JuegosComponent,
     ModalComponent,
-    EncuestaComponent
+    EncuestaComponent,
+    UsuariomenuComponent
   ],
   imports: [
     BrowserModule,

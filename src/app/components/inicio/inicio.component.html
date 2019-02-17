@@ -2,7 +2,7 @@
     <div class="body wrapper productoText">
         <div class="container-fluid">    
             <div class="row grid7">
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-md-4">
                     <div class="hovereffect">
                           <h2>SERES</h2>
                         <img class="img-responsive imagen-juego" (click)="openModal('custom-modal-1')" src="../../../assets/img/seres-portada.jpg" alt="">
@@ -34,15 +34,23 @@
                                     ambiente lo que les permite estar preparados y prevenir 
                                     situaciones que atenten a su integridad física.
                                 </p>
-                                <button (click)="closeModal('custom-modal-1');">Close</button>
-                                <a routerLink ='/user/login'>Descargar Juego</a>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                            <a routerLink ='/user/login'><button class="descargar">Descargar Juego</button></a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button (click)="closeModal('custom-modal-1');">Cerrar</button>
+                                    </div>
+                                </div>
+                                
+                                
                             </div>
                         </div>
                     </modal>
                 </section>
   
              
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="col-md-4">
                     <div class="hovereffect">
                           <h2>ESCUELA</h2>
                         <img class="img-responsive imagen-juego" (click)="openModal('custom-modal-2')" src="../../../assets/img/escuela-portada.jpg" alt="">
@@ -70,8 +78,14 @@
                                       a 6 años de edad. En ella, podrán divertirse jugando mientras 
                                       revisan cada una de las historias.
                                   </p>
-                                  <button (click)="closeModal('custom-modal-2');">Close</button>
-                                  <a routerLink ='/user/login'>Descargar Juego</a>
+                                  <div class="row">
+                                        <div class="col-md-8">
+                                            <a routerLink ='/user/login'><button class="descargar">Descargar Juego</button></a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <button (click)="closeModal('custom-modal-2');">Cerrar</button>
+                                        </div>
+                                    </div>
                               </div>
                           </div>
                       </modal>
@@ -79,7 +93,7 @@
               
               
           
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                  <div class="col-md-4">
                   <div class="hovereffect">
                           <h2>ANIMALES</h2>
                         <img class="img-responsive imagen-juego" (click)="openModal('custom-modal-3')" src="../../../assets/img/animales-portada.jpg" alt="">
@@ -110,21 +124,27 @@
                                   ambiente lo que les permite estar preparados y prevenir 
                                   situaciones que atenten a su integridad física.
                               </p>
-                              <button (click)="closeModal('custom-modal-3');">Close</button>
-                              <a routerLink ='/user/login'>Descargar Juego</a>
+                              <div class="row">
+                                    <div class="col-md-8">
+                                            <a routerLink ='/user/login'><button class="descargar">Descargar Juego</button></a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button (click)="closeModal('custom-modal-3');">Cerrar</button>
+                                    </div>
+                                </div>
                           </div>
                       </div>
                   </modal>
               </section>
             
   
-              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+              <div class="col-md-4">
                 <img class="imagen-juego" src="../../../assets/img/imagen4-invalida.jpg"  />
               </div>
-              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+              <div class="col-md-4">
                 <img class="imagen-juego" src="../../../assets/img/imagen5-invalida.jpg"  />
               </div>
-              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+              <div class="col-md-4">
                 <img class="imagen-juego" src="../../../assets/img/imagen6-invalida.jpg"  />
               </div>
             </div>        

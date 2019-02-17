@@ -21,3 +21,13 @@
   .user-details h5 {
     margin: 15px 0 5px 0;
   }
+
+  .productoText h2{
+    text-align: center;
+    color: white;
+    margin:10px
+}
+
+.productoText img:hover{
+  transform: scale(1.1);
+}

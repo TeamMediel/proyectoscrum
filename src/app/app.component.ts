@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Users } from "./models/users";
+import { User } from "./models/user";
 import { AuthService } from 'src/app/services/auth.service';
 import { UserService } from './services/user.service';
 @Component({
@@ -8,7 +8,7 @@ import { UserService } from './services/user.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  public usserLogged:Users;
+  public usserLogged:User;
 
   constructor(private authService: AuthService) { }
   
@@ -19,7 +19,8 @@ export class AppComponent implements OnInit {
   getLogged(){
     console.log(this.authService.getUserLoggedIn());
     this.usserLogged=JSON.parse(this.authService.getUserLoggedIn());
-    console.log("Userlogger",this.usserLogged);
+    console.log("Userlogger",this.usserLogged.roles);
+    
   }
   title = 'proyectoscrum';
 }

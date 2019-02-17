@@ -20,6 +20,7 @@ export class AuthService {
 });
 
 registerUser(user: any) {
+  console.log("Usuario Register ", user);
   const url_api = "http://localhost:3000/auth/register";
 
   return this.http.post(url_api, user);

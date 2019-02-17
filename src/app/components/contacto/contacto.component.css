@@ -26,21 +26,23 @@
     font-size: 16px;
 }
 .direccion h4{
-    color: black;
+    color: white;
     font-weight: bold
 }
 .direccion{
-    padding-top: 6%
+    padding-top: 6%;
+    
 }
 .direccion p{
     font-size: 16px;
-    color: black
+    color: white;
+    
 }
 .mencionContacto p{
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
     font-family: fantasy;
-    color: black;
+    color: white;
     font-style: italic
 }
 .total{

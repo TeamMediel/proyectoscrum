@@ -15,7 +15,6 @@ app.use(cors({origin: 'http://localhost:4200'}));
 
 //Routes
 app.use('/user',require('./routes/user.routes'));
-app.use('/roles',require('./routes/roles.routes'));
 app.use('/auth',require('./routes/auth.routes'));
 
 //Starting the server
