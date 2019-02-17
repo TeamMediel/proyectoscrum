@@ -10,11 +10,13 @@ import { RegisterComponent } from './components/user/register/register.component
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { JuegosComponent } from './components/juegos/juegos.component';
 import { EncuestaComponent } from './components/encuesta/encuesta.component';
+import { LineagraficasComponent } from './components/lineagraficas/lineagraficas.component';
 import { UsuariomenuComponent } from './components/usuariomenu/usuariomenu.component';
 
 export const routes: Routes = [
   {path: 'juegos', component: JuegosComponent},
   {path: 'encuesta', component: EncuestaComponent},
+  {path: 'lineagrafica', component: LineagraficasComponent},
   {path: 'usuarios', component: UsuariosComponent},
   {path: 'user/register', component: RegisterComponent},
   {path: 'user/login', component: LoginComponent},
