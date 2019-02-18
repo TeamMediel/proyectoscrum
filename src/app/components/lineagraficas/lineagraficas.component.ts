@@ -57,10 +57,12 @@ export class LineagraficasComponent implements OnInit {
     }else{
       this.router.navigate(['/user/login']);
     }
+  }
+  cerrarsesion(){
+    this.router.navigate(['/user/login']);
+    localStorage.removeItem("currentUser");
     
-    
-    
-
+    location.reload();
   }
   getLineagraficas() {
     this.lineagraficaService.getLineagraficas()

@@ -3,21 +3,18 @@ import { HttpClient } from '@angular/common/http';
 import { Lineagrafica } from '../models/lineagrafica';
 import { LineagraficasComponent } from '../components/lineagraficas/lineagraficas.component';
 
-
-
 @Injectable({
   providedIn: 'root'
 })
 export class LineagraficaService {
   
-    selectedLineagrafica: Lineagrafica;
-    lineagraficas: Lineagrafica[];
-    readonly URL_API = 'http://localhost:3000/lineagrafica';
+  selectedLineagrafica: Lineagrafica;
+  lineagraficas: Lineagrafica[];
+  readonly URL_API = 'http://localhost:3000/lineagrafica';
   
-
   constructor(private http: HttpClient) {
-      this.selectedLineagrafica = new Lineagrafica();
-   }
+    this.selectedLineagrafica = new Lineagrafica();
+  }
 
   getLineagraficas(){ 
     return this.http.get(this.URL_API);

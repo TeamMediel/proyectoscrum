@@ -273,6 +273,14 @@ a, button {
 	.nav ul {
 		font-size: 1.2em;
 	}
+	.logos{
+		display: none;
+	}
+	.footer{
+		text-align: center;
+		margin-left: 20%;
+		display:block !important;
+	}
 
 }
 
