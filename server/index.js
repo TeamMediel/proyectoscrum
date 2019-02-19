@@ -41,6 +41,7 @@ app.use(function (req, res, next) {
 app.use('/user',require('./routes/user.routes'));
 app.use('/auth',require('./routes/auth.routes'));
 app.use('/lineagrafica',require('./routes/lineagrafica.routes'));
+app.use('/encuesta',require('./routes/encuesta.routes.js'));
 
 //Starting the server
 app.listen(app.get('port'), () => {
