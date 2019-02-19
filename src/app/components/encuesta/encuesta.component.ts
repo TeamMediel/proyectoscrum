@@ -22,8 +22,10 @@ export class EncuestaComponent implements OnInit {
   
     this.encuestaService.postEncuesta(form.value)
       .subscribe(res => {
-        M.toast({html: 'Enviado'});
-     
+       // M.toast({html: 'Enviado'});
+       console.log(form.value);
+       console.log('Save succesfully');
+       //window.open("inicio","_self","")
       });
     }
   
