@@ -19,6 +19,10 @@ import { JuegosComponent } from './components/juegos/juegos.component';
 import { LineagraficaencuestaComponent } from './components/lineagraficaencuesta/lineagraficaencuesta.component';
 import { UsuariomenuComponent } from './components/usuariomenu/usuariomenu.component';
 import { LineagraficasComponent } from './components/lineagraficas/lineagraficas.component';
+import { EncuestaComponent } from './components/encuesta/encuesta.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SliderModule } from 'angular-image-slider';
+
 
 @NgModule({
   declarations: [
@@ -35,13 +39,16 @@ import { LineagraficasComponent } from './components/lineagraficas/lineagraficas
     ModalComponent,
     LineagraficaencuestaComponent,
     UsuariomenuComponent,
-    LineagraficasComponent
+    LineagraficasComponent,
+    EncuestaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+     BrowserAnimationsModule,
+    SliderModule
 
   ],
   providers: [ModalService],

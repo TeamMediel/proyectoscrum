@@ -24,6 +24,7 @@
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
+    "angular-image-slider": "0.0.8",
     "body-parser": "^1.18.3",
     "boostrap": "^2.0.0",
     "bootstrap": "^4.3.1",

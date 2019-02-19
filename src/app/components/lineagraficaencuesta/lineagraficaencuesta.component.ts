@@ -11,36 +11,44 @@ import { Lineagrafica } from 'src/app/models/lineagrafica';
   providers: [LineagraficaencuestaService]
 })
 export class LineagraficaencuestaComponent implements OnInit {
-  private linea:Lineagrafica;
-  constructor(private lineagraficaencuestaService: LineagraficaencuestaService,private router: Router) { }
+  private linea: Lineagrafica;
+  
+  constructor(private lineagraficaencuestaService: LineagraficaencuestaService, private router: Router) { }
 
   ngOnInit() {
+   
     this.linea = new Lineagrafica();
+   
   }
   addLineaGrafica(form: NgForm) {
-    console.log("holi ",form.value);
+    console.log("holi ", form.value);
     this.lineagraficaencuestaService.postLineagrafica(form.value)
       .subscribe(res => {
         //this.resetForm(form);
         console.log('Save succesfully');
-        window.close();
-        //this.getUsers();
+     window.open("inicio","_self","")
+     
+       
+   
+       
       });
-    }
+  }
 
-    seleccionarLoli(nombre:string){
-     this.linea.loli=nombre;
-    }
-    seleccionarColor(nombre:string){
-      this.linea.color=nombre;
-     }
-     seleccionarBoy(nombre:string){
-      this.linea.boy=nombre;
-     }
-     seleccionarGirl(nombre:string){
-      this.linea.girl=nombre;
-     }
-     seleccionarBack(nombre:string){
-      this.linea.background=nombre;
-     }
+
+
+  seleccionarLoli(nombre: string) {
+    this.linea.loli = nombre;
+  }
+  seleccionarColor(nombre: string) {
+    this.linea.color = nombre;
+  }
+  seleccionarBoy(nombre: string) {
+    this.linea.boy = nombre;
+  }
+  seleccionarGirl(nombre: string) {
+    this.linea.girl = nombre;
+  }
+  seleccionarBack(nombre: string) {
+    this.linea.background = nombre;
+  }
 }

@@ -1,40 +1,132 @@
+.mayor{
+    align-content: center;
+   
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+
+    text-align: center;
+    background-color: #ddd8d8;
+    color:rgb(0, 0, 0);
+}
+
+
+.mayorRow{
+    align-content: center;
+   
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    text-align: center;
+   
+    color:rgb(0, 0, 0);
+}
+
+
 .centrado{
     align-content: center;
     padding: 50px;
-    color:white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    color:rgb(0, 0, 0);
 }
 
-.menuadmin .col-md-3{
-    width: 90%;
+
+
+.menuadmin:hover{
+    cursor: pointer;
+    font-size: 22px;
+    background: green;
+}
+input {
+    width: 100%;
+  }
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid green;
+  }
+
+  input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid green;
+  }
+
+  .title {
+    background-color: rgb(134, 212, 137);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+   
+  }
+
+ .btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+  input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid green;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+.menuadmin{
     background: #5EAF42;
     color: white;
     height: 60px;
     font-size: 20px;
     text-align: center;
-    padding-top: 15px;
+    padding: 10px;
     border-radius: 8px;
-    margin: 0px 15px;
+    margin:10px;
 }
-.menuadmin .col-md-3:hover{
-    cursor: pointer;
-    font-size: 22px;
-    background: green;
-}
-
-.menuadmin{
-    margin: 15px 50px;
-}
-
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 10px;
+    text-align: center;
+    background-color: #f1f1f144;
+ 
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
 .seleccionado{
     background: green !important;
 }
+th, td {
+    padding: 8px;
+    text-align: left;
+  }
 
 .cerrar{
-    width: 80% !important;
-    margin: 0px 12px;
+
+    margin: 10px;
     background:transparent;
     height: 60px;
-    padding-top: 12px;
+    padding: 10px;
     border-radius: 8px;
     text-align: center;
     color: white;
