@@ -13,11 +13,12 @@ import { JuegosComponent } from './components/juegos/juegos.component';
 import { LineagraficaencuestaComponent } from './components/lineagraficaencuesta/lineagraficaencuesta.component';
 import { LineagraficasComponent } from './components/lineagraficas/lineagraficas.component';
 import { UsuariomenuComponent } from './components/usuariomenu/usuariomenu.component';
-
+import { EncuestaAdminComponent } from './components/encuesta-admin/encuesta-admin.component';
 export const routes: Routes = [
   {path: 'juegos', component: JuegosComponent},
   {path: 'lineagraficaencuesta', component: LineagraficaencuestaComponent},
   {path: 'lineagrafica', component: LineagraficasComponent},
+  {path: 'encuestaAdmin', component: EncuestaAdminComponent},
   {path: 'usuarios', component: UsuariosComponent},
   {path: 'user/register', component: RegisterComponent},
   {path: 'user/login', component: LoginComponent},

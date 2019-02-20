@@ -22,6 +22,7 @@ import { LineagraficasComponent } from './components/lineagraficas/lineagraficas
 import { EncuestaComponent } from './components/encuesta/encuesta.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SliderModule } from 'angular-image-slider';
+import { EncuestaAdminComponent } from './components/encuesta-admin/encuesta-admin.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { SliderModule } from 'angular-image-slider';
     LineagraficaencuestaComponent,
     UsuariomenuComponent,
     LineagraficasComponent,
-    EncuestaComponent
+    EncuestaComponent,
+    EncuestaAdminComponent
   ],
   imports: [
     BrowserModule,

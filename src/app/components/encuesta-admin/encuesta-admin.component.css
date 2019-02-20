@@ -8,6 +8,24 @@
     color:rgb(0, 0, 0);
 }
 
+.center{
+    align-content: center;
+    text-align: center;
+
+}
+.white{
+    color: white;
+}
+
+.mayorRow2{
+    align-content: center;
+   
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    text-align: center;
+    text-align: center;
+    background-color: #ddd8d8;
+    color:rgb(0, 0, 0);
+}
 
 .mayorRow{
     align-content: center;
@@ -28,9 +46,7 @@
     background-color: #f1f1f1;
     color:rgb(0, 0, 0);
 }
-.campo{
-  color:black
-}
+
 
 
 .menuadmin:hover{
@@ -57,12 +73,14 @@
   }
 
   .title {
-    background-color: rgb(134, 212, 137);
     border: none;
+    text-align: center;
     color: white;
     padding: 16px 32px;
     text-decoration: none;
     margin: 4px 2px;
+    font-size: 28px;
+    font-weight: bold;
    
   }
 
@@ -72,16 +90,10 @@
   color: white;
   padding: 16px 32px;
   text-decoration: none;
-  margin: 3px 2px;
-  font-size: 18px;
+  margin: 4px 2px;
   cursor: pointer;
 }
   
- .btn:hover{
-  
-  font-size: 20px;
-  cursor: pointer;
-}
 
 .menuadmin{
     background: #5EAF42;
@@ -179,3 +191,48 @@
   .select-items div:hover, .same-as-selected {
     background-color: rgba(0, 0, 0, 0.1);
   } 
+  .cerrar{
+
+    margin: 10px;
+    background:transparent;
+    height: 60px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    border:2px solid  rgb(233, 147, 26);
+    font-size: 20px;
+}
+.cerrar:hover{
+    background: orange;
+    color:  white;
+    transition: all 0.5s;
+    font-size: 22px;
+    cursor:pointer;
+    border:1px solid white;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+  } 
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }

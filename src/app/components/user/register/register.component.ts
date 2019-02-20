@@ -41,6 +41,7 @@ export class RegisterComponent implements OnInit {
         },
         res => {
           this.msgError = "Usuario ya existe";
+          console.log(res);
           this.onIsError();
         });
     } else {
