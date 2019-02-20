@@ -17,7 +17,9 @@
    
     color:rgb(0, 0, 0);
 }
-
+.contUsers{
+  margin-top: 50px
+}
 
 .centrado{
     align-content: center;
@@ -90,6 +92,7 @@ input {
     border-spacing: 0;
     width: 100%;
     border: 1px solid #ddd;
+    background-color: #f1f1f144;
   }
 .menuadmin{
     background: #5EAF42;

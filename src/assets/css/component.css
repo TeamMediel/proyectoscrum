@@ -300,6 +300,9 @@ a, button {
 	.footer{
 		display:block !important;
 	}
+	.sliderBanner{
+		display: none;
+	}
 	.no-touch .nav li:nth-child(6n+2) a:hover,
 	.no-touch .nav li:nth-child(6n+2) a:active,
 	.no-touch .nav li:nth-child(6n+2) a:focus {

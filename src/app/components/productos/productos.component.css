@@ -13,7 +13,9 @@
 }
 
 
-
+.overlay-right[_ngcontent-c2]{
+    background-color: saddlebrown !important
+}
 .parrots{
     text-align: left;
     float: left;
