@@ -226,7 +226,7 @@ export class EncuestaAdminComponent implements OnInit {
               break
             case "alto":
               this.pregunta4alto++;
-              this.pregunta4alto = this.getPorcentaje(this.pregunta4alto);
+              this.pregunta4altoPorcen = this.getPorcentaje(this.pregunta4alto);
               break;
             default:
               break;
