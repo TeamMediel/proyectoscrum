@@ -29,7 +29,7 @@ export class EncuestaComponent implements OnInit {
        // M.toast({html: 'Enviado'});
        console.log(form.value);
        console.log('Save succesfully');
-       //window.open("inicio","_self","")
+       window.open("inicio","_self","")
       });
     }
   

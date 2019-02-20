@@ -18,4 +18,10 @@ export class UsuariomenuComponent implements OnInit {
     
     location.reload();
   }
+
+  searchEncuesta() {
+ 
+       window.open("encuesta","_self","")
+      
+    }
 }
