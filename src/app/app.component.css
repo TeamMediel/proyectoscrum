@@ -49,6 +49,15 @@ background-attachment: fixed;
     align-content: center;
     padding: 50px;
     color:white;
+    width: 20px;
 }
+
+#grid[_ngcontent-c2]{
+    display:grid;
+    height:150;
+    grid-template-columns:repeat(1, 1fr);
+    grid-template-rows:300px;
+    grid-column-gap:20px;
+  }
 
 

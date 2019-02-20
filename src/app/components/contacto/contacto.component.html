@@ -46,13 +46,13 @@
     <div>
         <form class="text-center border border-light p-5" #contactoForm="ngForm" (ngSubmit)="enviarContacto(contactoForm)">
 
-            <p class="h4 mb-4">Contact us</p>
+            <p class="h4 mb-4">Contáctate con nosotros</p>
           
             <!-- Name -->
-            <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Name" name="contactFormName" #contactFormName="ngModel" [(ngModel)]="contacto.contactFormName">
-            <input type="email" id="defaultContactFormName" class="form-control mb-4" placeholder="E-mail" name="contactFormEmail" #contactFormEmail="ngModel" [(ngModel)]="contacto.contactFormEmail">
-            <input type="email" id="defaultContactFormName" class="form-control mb-4" placeholder="Titulo" name="contactFormSubjects" #contactFormSubjects="ngModel" [(ngModel)]="contacto.contactFormSubjects">
-            <input type="email" id="defaultContactFormName" class="form-control mb-4" placeholder="Msj" name="contactFormMessage" #contactFormMessage="ngModel" [(ngModel)]="contacto.contactFormMessage">
+            <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Nombre" name="contactFormName" #contactFormName="ngModel" [(ngModel)]="contacto.contactFormName">
+            <input type="email" id="defaultContactFormName" class="form-control mb-4" placeholder="Correo electrónico" name="contactFormEmail" #contactFormEmail="ngModel" [(ngModel)]="contacto.contactFormEmail">
+            <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Asunto" name="contactFormSubjects" #contactFormSubjects="ngModel" [(ngModel)]="contacto.contactFormSubjects">
+            <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Mensaje" name="contactFormMessage" #contactFormMessage="ngModel" [(ngModel)]="contacto.contactFormMessage">
 
             <!-- 
             <input type="email" formControlName="contactFormEmail" id="defaultContactFormEmail" mdbInput
@@ -82,7 +82,7 @@
           
             <!-- Send button -->
             <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
-              mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Send</button>
+              mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">ENVIAR</button>
           
           </form>
           <!-- Default form contact -->
