@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const EncuestaSchema = new Schema({
+    user_id: { type: String, required: false},
     pregunta1: { type: String, required: false},
     pregunta2: { type: String, required: false},
     pregunta3: { type: String, required: false},

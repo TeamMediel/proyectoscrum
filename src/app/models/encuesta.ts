@@ -1,7 +1,8 @@
 export class Encuesta {
-    constructor(_id = '', pregunta1 = '', pregunta2 = '', pregunta3 = '', pregunta4 = '', pregunta5 = '',
+    constructor(_id = '', user_id = '', pregunta1 = '', pregunta2 = '', pregunta3 = '', pregunta4 = '', pregunta5 = '',
     pregunta6 = '', pregunta7 = '', pregunta8 = '', pregunta9 = ''){
         this._id = _id;
+        this.user_id = user_id;
         this.pregunta1 = pregunta1;
         this.pregunta2 = pregunta2;
         this.pregunta3 = pregunta3;
@@ -14,6 +15,7 @@ export class Encuesta {
 
     }
     _id: string;
+    user_id: string;
     pregunta1: string;
     pregunta2:string;
     pregunta3:string;

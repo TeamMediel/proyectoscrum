@@ -8,6 +8,7 @@ encuestaCtrl.getEncuestas = async (req, res) => {
 
 encuestaCtrl.createEncuesta = async (req, res) => {
     const encuesta = new Encuesta({
+        user_id:req.body.user_id,
         pregunta1: req.body.pregunta1,
         pregunta2: req.body.pregunta2,
         pregunta3: req.body.pregunta3,
@@ -36,6 +37,7 @@ encuestaCtrl.getEncuesta = async (req, res) => {
 encuestaCtrl.editEncuesta = async (req, res) => {
     const { id } = req.params;
     const encuesta = {
+        user_id:req.body.user_id,
         pregunta1: req.body.pregunta1,
         pregunta2: req.body.pregunta2,
         pregunta3: req.body.pregunta3,
