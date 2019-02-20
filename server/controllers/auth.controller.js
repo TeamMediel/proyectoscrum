@@ -22,7 +22,7 @@ authCtrl.login = async (req, res) => {
 };
 
 authCtrl.register = async (req, res) => {
-    let user = await User.find({username: req.body.username});
+    let user = await User.find({email: req.body.email});
     
     if(user.length == 0){
         //let rolList = await Roles.find({name: 'usuario'});
@@ -31,7 +31,6 @@ authCtrl.register = async (req, res) => {
             name: req.body.name,
             lastname: req.body.lastname,
             email: req.body.email,
-            username: req.body.username,
             password: req.body.password
         });
         user.save().then(() => {

@@ -16,10 +16,21 @@ declare var M: any;
 })
 export class EncuestaComponent implements OnInit {
   
-  constructor(private encuestaService: EncuestaService,private authService: AuthService) { }
+  constructor(private encuestaService: EncuestaService,private authService: AuthService,private router: Router) { }
   public usserLogged:User;
   ngOnInit() {
     this.getLogged();
+      console.log("usuer",this.usserLogged);
+    if(this.usserLogged!=null){
+      if(this.usserLogged.roles=="usuario"){
+       
+      }else{
+        this.router.navigate(['/inicio']);
+      }
+    }else{
+      this.router.navigate(['/user/login']);
+    }
+    
   }
 
   addEncuesta(form: NgForm) {
@@ -37,7 +48,7 @@ export class EncuestaComponent implements OnInit {
     getLogged(){
       console.log(this.authService.getUserLoggedIn());
       this.usserLogged=JSON.parse(this.authService.getUserLoggedIn());
-      console.log("Userlogger",this.usserLogged._id);
+      //console.log("Userlogger",this.usserLogged._id);
       
     }
 
