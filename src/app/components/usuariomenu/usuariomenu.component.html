@@ -4,7 +4,8 @@
   <p>Selecciona la pestaña de PRODUCTOS y descarga los juegos para tus niños. No te olvides de realizar la encuesta luego de probar los diferentes juegos que ofrecemos para conocer tu opinión acerca de ellos. ¡Gracias!</p>
 
 
-  <a *ngIf="!encuesta" routerLink="/encuesta"><button class="encuesta">Realizar Encuesta</button></a><br>
+  <a *ngIf="!encuesta" routerLink="/encuesta"><button class="encuesta">Realizar Encuesta General</button></a><br>
+  <a *ngIf="!encuesta" routerLink="/lineagraficaencuesta"><button class="encuesta">Realizar Encuesta Línea Grafica</button></a><br>
   <p *ngIf="encuesta">¡Gracias por realizar la encuesta!</p>
   <button (click)="cerrarsesion()" class="cerrar">Cerrar Sesión</button>
 </div>
