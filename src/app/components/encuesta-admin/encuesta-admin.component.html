@@ -62,31 +62,31 @@
         <table>
             <thead>
 
-                <th>Norte De Guayaquil</th>
-                <th>Centro de Guayaquil</th>
-                <th>Sur de Guayaquil</th>
+                <th>Sector</th>
+                <th>Realizado por:</th>
+                <th>Correo</th>
+
+
 
             </thead>
             <tbody>
-                <tr class="mayorRow">
-                    <td>{{ pregunta2Norte}}</td>
-                    <td>{{ pregunta2Centro}}</td>
-                    <td>{{ pregunta2Sur }}</td>
+
+                <tr class="mayorRow" *ngFor="let encuesta of encuestaService.encuestas">
+
+                    <ng-container *ngFor="let user of userService.users">
+                        <ng-container *ngIf="user._id==encuesta.user_id">
+
+
+                            <td>{{ encuesta.pregunta2 }}</td>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.email }}</td>
+
+                        </ng-container>
+                    </ng-container>
                 </tr>
 
-                <tr>
-                    <th class="mayorRow2">Total</th>
-                    <th class="mayorRow2">Total</th>
-                    <th class="mayorRow2">Total</th>
-                </tr>
-                <tr class="mayorRow">
-                    <td>{{ pregunta2NortePorcen}}%</td>
-                    <td>{{ pregunta2CentroPorcen}}%</td>
-                    <td>{{ pregunta2SurPorcen}}%</td>
-                </tr>
             </tbody>
         </table>
-
     </div>
     <br> <br>
     <br> <br>
@@ -220,7 +220,8 @@
     <div style="overflow-x:auto;">
             <table>
                 <thead>
-                    <th>Padres</th>
+                    <th>Padre</th>
+                    <th>Madre</th>
                     <th>Maestro</th>
                     <th>Terapeuta</th>
                     <th>Psicólogo</th>
@@ -232,6 +233,7 @@
                 <tbody>
                     <tr class="mayorRow">
                             <td>{{ pregunta6padres}}</td>
+                            <td>{{ pregunta6madres}}</td>
                             <td>{{ pregunta6maestro}}</td>
                             <td>{{ pregunta6terapeuta}}</td>
                             <td>{{ pregunta6psicologo}}</td>
@@ -245,10 +247,12 @@
                         <th class="mayorRow2">Total</th>
                         <th class="mayorRow2">Total</th>
                         <th class="mayorRow2">Total</th>
+                        <th class="mayorRow2">Total</th>
                        
                     </tr>
                     <tr class="mayorRow">
                             <td>{{ pregunta6padresPorcen}}%</td>
+                            <td>{{ pregunta6madresPorcen}}%</td>
                             <td>{{ pregunta6maestroPorcen}}%</td>
                             <td>{{ pregunta6terapeutaPorcen}}%</td>
                             <td>{{ pregunta6psicologoPorcen}}%</td>

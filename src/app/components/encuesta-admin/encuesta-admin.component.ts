@@ -54,11 +54,13 @@ export class EncuestaAdminComponent implements OnInit {
 
   //pregunta6
   public pregunta6padres: number;
+  public pregunta6madres: number;
   public pregunta6maestro: number;
   public pregunta6terapeuta: number;
   public pregunta6psicologo: number;
   public pregunta6otro: number;
   public pregunta6padresPorcen: number;
+  public pregunta6madresPorcen: number;
   public pregunta6maestroPorcen: number;
   public pregunta6terapeutaPorcen: number;
   public pregunta6psicologoPorcen: number;
@@ -127,7 +129,9 @@ export class EncuestaAdminComponent implements OnInit {
 
     //pregunta6
     this.pregunta6maestro = 0;
-    this.pregunta6padres = 0;
+    this.pregunta6padres = 0;   
+    this.pregunta6madres = 0;    
+    this.pregunta6madres = 0;
     this.pregunta6terapeuta = 0;
     this.pregunta6psicologo = 0;
     this.pregunta6otro = 0;
@@ -174,7 +178,7 @@ export class EncuestaAdminComponent implements OnInit {
         console.log('getEncuesta', res);
         this.totalEncuestas = this.encuestaService.encuestas.length;
         this.encuestaService.encuestas.forEach(element => {
-          switch (element.pregunta2) {
+        /*  switch (element.pregunta2) {
             case "norte":
               this.pregunta2Norte++;
               this.pregunta2NortePorcen = this.getPorcentaje(this.pregunta2Norte);
@@ -189,7 +193,7 @@ export class EncuestaAdminComponent implements OnInit {
               break;
             default:
               break;
-          }
+          }*/
 
           //pregunta3
           switch (element.pregunta3) {
@@ -256,6 +260,11 @@ export class EncuestaAdminComponent implements OnInit {
               this.pregunta6padres++;
               this.pregunta6padresPorcen = this.getPorcentaje(this.pregunta6padres);
               break;
+              case "madres":
+              this.pregunta6madres++;
+              this.pregunta6madresPorcen = this.getPorcentaje(this.pregunta6madres);
+              break;
+          
             case "maestro":
               this.pregunta6maestro++;
               this.pregunta6maestroPorcen = this.getPorcentaje(this.pregunta6maestro);

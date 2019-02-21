@@ -23,14 +23,8 @@
                             </div><br>
 
                             <br><label class="preguntas">¿En qué sector vive?</label>
-                            <select  class='custom-select' ngModel #pregunta2="ngModel" required name="pregunta2">
-                                <option value="norte">Norte de Guayaquil</option>
-                                <option value="centro">Centro de Guayaquil</option>
-                                <option value="sur">Sur de Guayaquil</option>
-                            </select>
-                            <div class="campo" *ngIf="pregunta2.errors">
-                                Campo obligatorio.
-                            </div><br>
+                            <input class="span1 form-control" type="text" name="pregunta2" required ngModel ng-model="pregunta2">
+                            
 
                             <br><label class="preguntas">Indique su nivel de conocimiento en el uso de móviles</label>
                             <select class="custom-select" name="pregunta3" ngModel #pregunta3="ngModel" ng-model="pregunta3" required>
@@ -67,7 +61,8 @@
 
                             <br><label class="preguntas">¿Qué parentesco o relación tiene usted con el niño?</label>
                             <select class="custom-select" name="pregunta6" required ngModel #pregunta6="ngModel" ng-model="pregunta6">
-                                <option value="padres">Padre/Madre de Familia</option>
+                                <option value="padres">Padre de Familia</option>
+                                <option value="madres">Madre de Familia</option>
                                 <option value="maestro" ng-selected="true">Maestro/a</option>
                                 <option value="terapeuta">Terapeuta</option>
                                 <option value="psicologo">Psicólogo</option>
