@@ -357,4 +357,16 @@ export class EncuestaAdminComponent implements OnInit {
     
     location.reload();
   }
+  
+    downloadJson(){
+    var sJson = JSON.stringify(this.encuestaService.encuestas);
+    var element = document.createElement('a');
+    element.setAttribute('href', "data:text/json;charset=UTF-8," + encodeURIComponent(sJson));
+    element.setAttribute('download', "primer-server-task.json");
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click(); // simulate click
+    document.body.removeChild(element);
+}
+  
 }
