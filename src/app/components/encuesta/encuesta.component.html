@@ -17,7 +17,7 @@
                             <input type="hidden" name="user_id" ng-model="user_id" ngModel value="usserLogged._id">
 
                             <br><label class="preguntas">¿Cuántos niños tiene?</label>
-                            <input type="number" name="pregunta1" ngModel #pregunta1="ngModel" required><br>
+                            <input type="number" min="1" max="10" name="pregunta1" ngModel #pregunta1="ngModel" required><br>
                             <div class="campo" *ngIf="pregunta1.errors">
                                 Campo obligatorio.
                             </div><br>

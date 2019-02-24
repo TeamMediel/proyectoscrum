@@ -11,14 +11,20 @@ import { User } from 'src/app/models/user';
 })
 export class UsuariomenuComponent implements OnInit {
   public encuesta:boolean;
+  public estadolinea:boolean;
   public usserLogged:User;
 
   constructor(private router: Router,private encuestaService: EncuestaService) {}
 
   ngOnInit() {
     this.encuesta=false;
+    this.estadolinea=false;
     this.usserLogged=JSON.parse(localStorage.getItem("currentUser"));
     if(this.usserLogged!=null){
+      console.log("miau",this.usserLogged.estadolineagrafica);
+      if(this.usserLogged.estadolineagrafica=="si"){
+        this.estadolinea=true;
+      }
       if(this.usserLogged.roles=="usuario"){
         this.getValidacionEncuesta();
       }else{

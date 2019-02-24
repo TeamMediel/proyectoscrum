@@ -5,4 +5,5 @@ export interface Users {
     email?: string;
     roles?: string;
     password?: string;
+    estadolineagrafica?:string;
 }

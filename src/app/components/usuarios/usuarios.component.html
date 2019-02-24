@@ -70,7 +70,6 @@
                         <th class="mayor">Nombre</th>
                         <th class="mayor">Apellido</th>
                         <th class="mayor">Correo</th>
-                        <th class="mayor">Contraseña</th>
                         <th class="mayor">Rol</th>
                         <th class="mayor">Acciones</th>
                     </thead>
@@ -80,7 +79,6 @@
                             <td >{{ user.name }}</td>
                             <td>{{ user.lastname }}</td>
                             <td>{{ user.email }}</td>
-                            <td>{{ user.password }}</td>
                             <td>{{ user.roles }}</td>
                             <td>
                                 <a (click)="editUser(user)">

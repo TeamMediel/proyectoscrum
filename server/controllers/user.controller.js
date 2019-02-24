@@ -12,7 +12,8 @@ userCtrl.createUser = async (req, res) => {
         name: req.body.name,
         lastname: req.body.lastname,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        estadolineagrafica: req.body.estadolineagrafica
     });
     await user.save();
     res.json({
@@ -34,7 +35,8 @@ userCtrl.editUser = async (req, res) => {
         name: req.body.name,
         lastname: req.body.lastname,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        estadolineagrafica: req.body.estadolineagrafica
     };
     await User.findByIdAndUpdate(id, {$set: user}, {new: true});
     res.json({
